@@ -28,7 +28,8 @@ function expectedModifiers() {
   } else if (navigator.platform.indexOf("Win") === 0) {  // Windows
     return 'Alt';
   } else {  // Linux
-    return 'Meta';
+    return 'Mod4';
+  //  return 'Meta';
   }
 }
 
@@ -37,7 +38,8 @@ function activeModifiers(event) {
   if (event.shiftKey) modifiers.push('Shift');
   if (event.ctrlKey) modifiers.push('Ctrl');
   if (event.altKey) modifiers.push('Alt');
-  if (event.metaKey) modifiers.push('Meta');
+  if (event.metaKey) modifiers.push('Mod4');
+  //if (event.metaKey) modifiers.push('Meta');
   return modifiers.join('+');
 }
 
